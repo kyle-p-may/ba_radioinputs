@@ -2,29 +2,29 @@
 [BaseContainerProps()]
 modded class SCR_VONMenu
 {
-	// TODO(kylem): make this configurable
-	const int N_FREQ_STEPS = 10;
-		
+	[Attribute("10", UIWidgets.EditBox, "Gameplay", desc: "N steps to adjust on single input")]
+	protected int m_iNFreqSteps;
+
 	protected void ActionFrequencyPageUp(float value, EActionTrigger reason)
 	{
 		if (0 == value)
 			return;
-		
-		OnAdjustEntryNSteps(1 * N_FREQ_STEPS);
+
+		OnAdjustEntryNSteps(1 * m_iNFreqSteps);
 	}
-	
+
 	protected void ActionFrequencyPageDown(float value, EActionTrigger reason)
 	{
 		if (0 == value)
 			return;
-		
-		OnAdjustEntryNSteps(-1 * N_FREQ_STEPS);
+
+		OnAdjustEntryNSteps(-1 * m_iNFreqSteps);
 	}
 
 	//------------------------------------------------------------------------------------------------
 	//! SCR_RadialMenu event
 	override protected void OnOpenMenu(SCR_SelectionMenu menu)
-	{				
+	{
 		super.OnOpenMenu(menu);
 		InputManager inputMgr = GetGame().GetInputManager();
 		if (null == inputMgr)
@@ -34,7 +34,7 @@ modded class SCR_VONMenu
 		inputMgr.AddActionListener("VONMenuFrequencyPageUp", EActionTrigger.DOWN, ActionFrequencyPageUp);
 		inputMgr.AddActionListener("VONMenuFrequencyPageDown", EActionTrigger.DOWN, ActionFrequencyPageDown);
 	}
-	
+
 	//------------------------------------------------------------------------------------------------
 	//! SCR_RadialMenu event
 	override protected void OnCloseMenu(SCR_SelectionMenu menu)
@@ -48,24 +48,24 @@ modded class SCR_VONMenu
 		inputMgr.RemoveActionListener("VONMenuFrequencyPageUp", EActionTrigger.DOWN, ActionFrequencyPageUp);
 		inputMgr.RemoveActionListener("VONMenuFrequencyPageDown", EActionTrigger.DOWN, ActionFrequencyPageDown);
 	}
-	
+
 	protected void OnAdjustEntryNSteps(int nSteps)
 	{
 		if (0 == nSteps)
 			return;
-		
+
 		if (!m_RadialMenu.GetSelectionEntry())
 			return;
-		
+
 		m_Display.SetFrequenciesVisible(true);
 		m_FrequencyListTimer = 3;
-		
+
 		SCR_VONEntry entry = SCR_VONEntry.Cast(m_RadialMenu.GetSelectionEntry());
 		if (!entry)
 			return;
-		
+
 		entry.AdjustEntryModif(nSteps);
-				
+
 		SCR_VONEntryRadio radioEntry = SCR_VONEntryRadio.Cast(entry);
 		if (radioEntry)
 		{
@@ -74,4 +74,4 @@ modded class SCR_VONMenu
 			radioEntry.Update();
 		}
 	}
-};
+}
