@@ -1,0 +1,8 @@
+GameProject {
+ ID "BARadioInputs"
+ GUID "65F016D197BE7ADF"
+ TITLE "BA_RadioInputs"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
