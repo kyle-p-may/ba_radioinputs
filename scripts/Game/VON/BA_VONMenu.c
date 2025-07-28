@@ -1,4 +1,3 @@
-//------------------------------------------------------------------------------------------------
 [BaseContainerProps()]
 modded class SCR_VONMenu
 {
@@ -31,8 +30,8 @@ modded class SCR_VONMenu
 		{
 			return;
 		}
-		inputMgr.AddActionListener("VONMenuFrequencyPageUp", EActionTrigger.DOWN, ActionFrequencyPageUp);
-		inputMgr.AddActionListener("VONMenuFrequencyPageDown", EActionTrigger.DOWN, ActionFrequencyPageDown);
+		inputMgr.AddActionListener("BA_VONMenuFrequencyPageUp", EActionTrigger.DOWN, ActionFrequencyPageUp);
+		inputMgr.AddActionListener("BA_VONMenuFrequencyPageDown", EActionTrigger.DOWN, ActionFrequencyPageDown);
 	}
 
 	//------------------------------------------------------------------------------------------------
@@ -45,8 +44,8 @@ modded class SCR_VONMenu
 		{
 			return;
 		}
-		inputMgr.RemoveActionListener("VONMenuFrequencyPageUp", EActionTrigger.DOWN, ActionFrequencyPageUp);
-		inputMgr.RemoveActionListener("VONMenuFrequencyPageDown", EActionTrigger.DOWN, ActionFrequencyPageDown);
+		inputMgr.RemoveActionListener("BA_VONMenuFrequencyPageUp", EActionTrigger.DOWN, ActionFrequencyPageUp);
+		inputMgr.RemoveActionListener("BA_VONMenuFrequencyPageDown", EActionTrigger.DOWN, ActionFrequencyPageDown);
 	}
 
 	protected void OnAdjustEntryNSteps(int nSteps)
