@@ -16,7 +16,8 @@ StringTable {
    Target_pt_br "Diminuir frequência (grande passo)"
    Target_zh_cn "降低频率 （大步进）"
    Target_uk_ua "Зменшити частоту (великий крок)"
-   Modified 1710827802
+   Status DEVELOPMENT_DONE
+   Modified 1710829168
    Author "kylep"
    LastChanged "kylep"
   }
@@ -35,7 +36,8 @@ StringTable {
    Target_pt_br "Aumentar frequência (grande passo)"
    Target_zh_cn "提高频率 （大步进）"
    Target_uk_ua "Збільшити частоту (великий крок)"
-   Modified 1710827629
+   Status DEVELOPMENT_DONE
+   Modified 1710829175
    Author "kylep"
    LastChanged "kylep"
   }
