@@ -5,4 +5,79 @@ GameProject {
  Dependencies {
   "58D0FB3206B6F859"
  }
+ Configurations {
+  GameProjectConfig PC {
+   WidgetManagerSettings WidgetManagerSettings "{AC4BE58770485E02}" {
+    StringTables {
+     StringTableDefinition "{65F925948E8D09B0}" {
+      StringTableSource "{0A983DCCB75FFCFE}localization/BA_RadioInputs_localization.st"
+      Languages {
+       LanguageDefinition "{65F9259490720A6D}" {
+        Code "cs_cz"
+        StringTableRuntime "{92B4418E2D517BD5}localization/BA_RadioInputs_localization.cs_cz.conf"
+       }
+       LanguageDefinition "{65F9259490720A30}" {
+        Code "de_de"
+        StringTableRuntime "{47CA5BBD3EF26AF5}localization/BA_RadioInputs_localization.de_de.conf"
+       }
+       LanguageDefinition "{65F9259490720A22}" {
+        Code "en_us"
+        StringTableRuntime "{193AD1F654016FF4}localization/BA_RadioInputs_localization.en_us.conf"
+       }
+       LanguageDefinition "{65F9259490720A17}" {
+        Code "es_es"
+        StringTableRuntime "{DC769C7FBA0304EB}localization/BA_RadioInputs_localization.es_es.conf"
+       }
+       LanguageDefinition "{65F9259490720A06}" {
+        Code "fr_fr"
+        StringTableRuntime "{67DE69485C80E7E9}localization/BA_RadioInputs_localization.fr_fr.conf"
+       }
+       LanguageDefinition "{65F9259490720BF7}" {
+        Code "it_it"
+        StringTableRuntime "{E7C2E67CF1A26410}localization/BA_RadioInputs_localization.it_it.conf"
+       }
+       LanguageDefinition "{65F9259490720BE6}" {
+        Code "ja_jp"
+        StringTableRuntime "{F7D95BEECFD354BB}localization/BA_RadioInputs_localization.ja_jp.conf"
+       }
+       LanguageDefinition "{65F9259490720BD7}" {
+        Code "ko_kr"
+        StringTableRuntime "{576773425CFE5784}localization/BA_RadioInputs_localization.ko_kr.conf"
+       }
+       LanguageDefinition "{65F9259490720BC5}" {
+        Code "pl_pl"
+        StringTableRuntime "{0B16D5B8E211CBF8}localization/BA_RadioInputs_localization.pl_pl.conf"
+       }
+       LanguageDefinition "{65F9259490720BB4}" {
+        Code "pt_br"
+        StringTableRuntime "{DE614F74D9EF0142}localization/BA_RadioInputs_localization.pt_br.conf"
+       }
+       LanguageDefinition "{65F9259490720BA4}" {
+        Code "ru_ru"
+        StringTableRuntime "{8B205BDC44966434}localization/BA_RadioInputs_localization.ru_ru.conf"
+       }
+       LanguageDefinition "{65F9259490720B23}" {
+        Code "uk_ua"
+        StringTableRuntime "{01780E2A28B8DA61}localization/BA_RadioInputs_localization.uk_ua.conf"
+       }
+       LanguageDefinition "{65F9259490720B11}" {
+        Code "zh_cn"
+        StringTableRuntime "{DBC8601711180A7C}localization/BA_RadioInputs_localization.zh_cn.conf"
+       }
+      }
+     }
+    }
+   }
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
 }
