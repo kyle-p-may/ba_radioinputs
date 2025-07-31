@@ -53,9 +53,15 @@ Right now, all testing is done with manually using the dedicated server tool. Th
 7. Test Flow H
     1. p1 tap page up input twice as quickly as possible.
     2. p1 should have paged twice, rather than once.
-7. Test Flow I
+8. Test Flow I
     1. p1 tap page down input twice as quickly as possible.
     2. p1 should have paged twice, rather than once.
+9. Test Flow J
+    1. p1 hold page up input.
+    2. p1 should be at max frequency.
+10. Test Flow K
+    1. p1 hold page down input.
+    2. p1 should be at min frequency.
 
 ## Testing Localization
 Each language should be selected, and then:
