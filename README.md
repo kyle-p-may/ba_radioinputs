@@ -7,9 +7,9 @@ As of now, the following inputs have been added:
 Right now, all testing is done with manually using the dedicated server tool. The following procedure is done using both US/USSR factions (i.e. their specific radios). This should be done with both channels. At each step, the other channel can be used to transmit, and shouldn't change.
 1. Speak on channel as p1. p2 can hear.
 2. Page down on channel as p1. p2 cannot hear.
-3. Page up on platoon as p1. p2 can hear.
-4. Page up on platoon as p1. p2 cannot hear.
-5. Page down on platoon as p1. p2 can hear.
+3. Page up on channel as p1. p2 can hear.
+4. Page up on channel as p1. p2 cannot hear.
+5. Page down on channel as p1. p2 can hear.
 6. Page up as p1. Scroll up as p2. Both can hear.
 7. Page up and then scroll up as p1. Scroll up as p2. Both can hear.
 
