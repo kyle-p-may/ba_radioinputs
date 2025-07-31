@@ -50,6 +50,12 @@ Right now, all testing is done with manually using the dedicated server tool. Th
     3. p1/p2 should be on the same frequency.
     4. p2 tries to page down again.
     5. p2 should be at the same frequency still.
+7. Test Flow H
+    1. p1 tap page up input twice as quickly as possible.
+    2. p1 should have paged twice, rather than once.
+7. Test Flow I
+    1. p1 tap page down input twice as quickly as possible.
+    2. p1 should have paged twice, rather than once.
 
 ## Testing Localization
 Each language should be selected, and then:
@@ -63,3 +69,4 @@ Each language should be selected, and then:
 # Changelog
 - v1.1.0: Added default inputs for console. Added control hints for new radio actions. Added control menu to change keybinds.
 - v1.1.1: Added string localization.
+- v1.1.2: Fixed input filter for keyboard inputs so they are consistent with console inputs. Now, holding/rapid inputs for keyboard should work more intuitively.
