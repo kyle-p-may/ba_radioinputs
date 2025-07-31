@@ -69,4 +69,4 @@ Each language should be selected, and then:
 # Changelog
 - v1.1.0: Added default inputs for console. Added control hints for new radio actions. Added control menu to change keybinds.
 - v1.1.1: Added string localization.
-- v1.1.2: Fixed input filter for keyboard inputs so they are consistent with console inputs. Now, holding/rapid inputs for keyboard should work more intuitively.
+- v1.1.2: Fixed input filter for keyboard inputs so they are consistent with console inputs. Now, holding/rapid inputs for keyboard should work more intuitively. Fixed rebinding console controls; now, default inputs will no longer work after rebind, and new inputs will use the same input filter.
