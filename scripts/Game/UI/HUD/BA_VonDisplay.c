@@ -1,6 +1,6 @@
 modded class SCR_VonDisplay
 {
-	[Attribute("false", UIWidgets.EditBox, "Gameplay", desc: "Enable nametags on radio transmissions")]
+	[Attribute("false", UIWidgets.EditBox, "Gameplay", desc: "Show friendly nametags on transmissions?")]
 	protected bool enNameTagsRadio;
 	//------------------------------------------------------------------------------------------------
 	//! Update transmission data
