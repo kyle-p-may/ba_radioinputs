@@ -1,7 +1,7 @@
 modded class SCR_VonDisplay
 {
 	[Attribute("false", UIWidgets.EditBox, "Gameplay", desc: "Show friendly nametags on transmissions?")]
-	protected bool enNameTagsRadio;
+	protected bool m_bShowFriendlyNametagsOnRecv;
 	//------------------------------------------------------------------------------------------------
 	//! Update transmission data
 	//! \param TransmissionData is the subject
@@ -15,7 +15,7 @@ modded class SCR_VonDisplay
 
 		if (radioTransceiver && result)
 		{
-			data.m_Widgets.m_wName.SetVisible(enNameTagsRadio);
+			data.m_Widgets.m_wName.SetVisible(m_bShowFriendlyNametagsOnRecv);
 		}
 
 		return result;
