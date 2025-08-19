@@ -42,7 +42,9 @@ modded class SCR_VONController
 
 		if (!ActivateVON(newEntry))
 		{
-			Print("Failed to activate VON for newEntry: " + newEntry);
+#ifdef BA_RADIOINPUTS_DEBUG
+			Print("Failed to activate VON for newEntry: " + newEntry, LogLevel.ERROR);
+#endif
 			return false;
 		}
 
@@ -55,11 +57,13 @@ modded class SCR_VONController
 
 	protected void BA_ActionVONBroadcastByChannel(int channel, bool activate)
 	{
-		if (!m_VONComp) return;
+		if (!m_VONComp)
+			return;
 
 		if (activate)
 		{
-			if (!BA_SelectTransceiver(channel)) return;
+			if (!BA_SelectTransceiver(channel))
+				return;
 		}
 
 		EVONTransmitType transmitType;
@@ -87,7 +91,7 @@ modded class SCR_VONController
 	protected void BA_ActionVONBroadcastChannel0(float value, EActionTrigger reason = EActionTrigger.UP)
 	{
 #ifdef BA_RADIOINPUTS_DEBUG
-		Print("ActionVONBroadcastChannel0"); '
+		Print("ActionVONBroadcastChannel0", LogLevel.DEBUG);
 #endif
 		BA_ActionVONBroadcastByChannel(0, reason != EActionTrigger.UP);
 	}
@@ -95,7 +99,7 @@ modded class SCR_VONController
 	protected void BA_ActionVONBroadcastChannel1(float value, EActionTrigger reason = EActionTrigger.UP)
 	{
 #ifdef BA_RADIOINPUTS_DEBUG
-		Print("ActionVONBroadcastChannel1");
+		Print("ActionVONBroadcastChannel1", LogLevel.DEBUG);
 #endif
 		BA_ActionVONBroadcastByChannel(1, reason != EActionTrigger.UP);
 	}
@@ -112,7 +116,6 @@ modded class SCR_VONController
 		}
 	}
 
-
 	override protected void Cleanup()
 	{
 		if (m_InputManager)
@@ -124,6 +127,5 @@ modded class SCR_VONController
 		}
 		super.Cleanup();
 	}
-
 
 }
