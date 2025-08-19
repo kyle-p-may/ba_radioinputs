@@ -72,7 +72,36 @@ Each language should be selected, and then:
 1. Open control menu and select new key bind for page up/page down actions.
 2. Perform Test Flow A, B, and C
 
+## Testing nametag changes
+1. Perform Test Flow A, B, and C with nametags enabled and disabled.
+
+## Testing channel-specific transmit inputs
+Test Flow A
+1. Transmit on channel 1.
+Test Flow B
+1. Test Flow A with channel 2.
+Test Flow C
+1. p1 change channel 1.
+2. p1/p2 are not connected via channel 1 while transmitting with new input.
+3. p2 tune to new channel.
+4. p1/p2 are connected via channel 1 while transmitting with new input.
+Test Flow D
+1. Test Flow C with channel 2.
+Test Flow E
+1. Acquire 2 radios.
+2. Tune each channel to a different frequency.
+3. Select first radio via radial menu.
+4. Transmit channel 1 and 2.
+5. Select second radio via radial menu.
+6. Transmit channel 1 and 2.
+Test Flow F
+1. Acquire radio with a single channel (US radio backpack)
+2. Select single channel radio.
+3. Transmit on channel 1.
+4. Attempt to transmit on channel 2 (nothing should happen and radio should still be on channel 1).
+
 # Changelog
 - v1.1.0: Added default inputs for console. Added control hints for new radio actions. Added control menu to change keybinds.
 - v1.1.1: Added string localization.
 - v1.1.2: Fixed input filter for keyboard inputs so they are consistent with console inputs. Now, holding/rapid inputs for keyboard should work more intuitively. Fixed rebinding console controls; now, default inputs will no longer work after rebind, and new inputs will use the same input filter.
+- v1.2.0: Added a new configuration for controlling transmission nametags on SCR_VoNDisplay (Show friendly nametags on transmissions?); nametags disabled by default. Added 2 new inputs (see control menu for binding) (Transmit on channel 1, Transmit on channel 2) which do the following: Activate the specified channel, and start a transmission on the given channel. The channel ID is relative to the active radio (which was selected via the radial menu).
