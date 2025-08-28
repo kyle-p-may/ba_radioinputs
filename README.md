@@ -4,6 +4,8 @@ This is an Arma Reforger mod that creates additional inputs for the radio system
 As of now, the following inputs have been added:
 1. Page Up: Adjust the selected channel up N frequency steps (input: keyboard=F7, gamepad=x; default: N = 10)
 2. Page Down: Adjust the selected channel down N frequency steps (input: keyboard=F8, gamepad=y; N = 10)
+3. Transmit Ch 1: Transmit on channel 1 of the currently selected radio (input: keyboard=F9, gamepad=unbinded)
+4. Transmit Ch 2: Transmit on channel 2 of the currently selected radio (input: keyboard=F10, gamepad=unbinded)
 
 # Testing
 Right now, all testing is done with manually using the dedicated server tool. The following procedure is done using both US/USSR factions (i.e. their specific radios).
@@ -105,3 +107,4 @@ Test Flow F
 - v1.1.1: Added string localization.
 - v1.1.2: Fixed input filter for keyboard inputs so they are consistent with console inputs. Now, holding/rapid inputs for keyboard should work more intuitively. Fixed rebinding console controls; now, default inputs will no longer work after rebind, and new inputs will use the same input filter.
 - v1.2.0: Added a new configuration for controlling transmission nametags on SCR_VoNDisplay (Show friendly nametags on transmissions?); nametags disabled by default. Added 2 new inputs (see control menu for binding) (Transmit on channel 1, Transmit on channel 2) which do the following: Activate the specified channel, and start a transmission on the given channel. The channel ID is relative to the active radio (which was selected via the radial menu).
+- v1.2.1: Improve activate/deactivate flow for channel-specific transmission so it works better with other radio mods (i.e. ACE Radio Dev). Make the flow work with long-range radios.
