@@ -1,4 +1,4 @@
-This is an Arma Reforger mod that creates additional inputs for the radio system.
+This mod creates additional inputs/configs for the radio system.
 
 # Features
 As of now, the following inputs have been added:
@@ -6,6 +6,8 @@ As of now, the following inputs have been added:
 2. Page Down: Adjust the selected channel down N frequency steps (input: keyboard=F8, gamepad=y; N = 10)
 3. Transmit Ch 1: Transmit on channel 1 of the currently selected radio (input: keyboard=F9, gamepad=unbinded)
 4. Transmit Ch 2: Transmit on channel 2 of the currently selected radio (input: keyboard=F10, gamepad=unbinded)
+
+Additionally, the mod provides a new configuration for controlling transmission nametags on SCR_VoNDisplay (Show friendly nametags on transmissions?); nametags disabled by default.
 
 # Testing
 Right now, all testing is done with manually using the dedicated server tool. The following procedure is done using both US/USSR factions (i.e. their specific radios).
