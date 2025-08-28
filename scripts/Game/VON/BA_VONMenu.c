@@ -4,24 +4,22 @@ modded class SCR_VONMenu
 	[Attribute("10", UIWidgets.EditBox, "Gameplay", desc: "N steps to adjust on single input")]
 	protected int m_iNFreqSteps;
 
-	protected void ActionFrequencyPageUp(float value, EActionTrigger reason)
+	protected void BARI_ActionFrequencyPageUp(float value, EActionTrigger reason)
 	{
 		if (0 == value)
 			return;
 
-		OnAdjustEntryNSteps(1 * m_iNFreqSteps);
+		BARI_OnAdjustEntryNSteps(1 * m_iNFreqSteps);
 	}
 
-	protected void ActionFrequencyPageDown(float value, EActionTrigger reason)
+	protected void BARI_ActionFrequencyPageDown(float value, EActionTrigger reason)
 	{
 		if (0 == value)
 			return;
 
-		OnAdjustEntryNSteps(-1 * m_iNFreqSteps);
+		BARI_OnAdjustEntryNSteps(-1 * m_iNFreqSteps);
 	}
 
-	//------------------------------------------------------------------------------------------------
-	//! SCR_RadialMenu event
 	override protected void OnOpenMenu(SCR_SelectionMenu menu)
 	{
 		super.OnOpenMenu(menu);
@@ -30,12 +28,10 @@ modded class SCR_VONMenu
 		{
 			return;
 		}
-		inputMgr.AddActionListener("BA_VONMenuFrequencyPageUp", EActionTrigger.DOWN, ActionFrequencyPageUp);
-		inputMgr.AddActionListener("BA_VONMenuFrequencyPageDown", EActionTrigger.DOWN, ActionFrequencyPageDown);
+		inputMgr.AddActionListener("BA_VONMenuFrequencyPageUp", EActionTrigger.DOWN, BARI_ActionFrequencyPageUp);
+		inputMgr.AddActionListener("BA_VONMenuFrequencyPageDown", EActionTrigger.DOWN, BARI_ActionFrequencyPageDown);
 	}
 
-	//------------------------------------------------------------------------------------------------
-	//! SCR_RadialMenu event
 	override protected void OnCloseMenu(SCR_SelectionMenu menu)
 	{
 		super.OnCloseMenu(menu);
@@ -44,11 +40,11 @@ modded class SCR_VONMenu
 		{
 			return;
 		}
-		inputMgr.RemoveActionListener("BA_VONMenuFrequencyPageUp", EActionTrigger.DOWN, ActionFrequencyPageUp);
-		inputMgr.RemoveActionListener("BA_VONMenuFrequencyPageDown", EActionTrigger.DOWN, ActionFrequencyPageDown);
+		inputMgr.RemoveActionListener("BA_VONMenuFrequencyPageUp", EActionTrigger.DOWN, BARI_ActionFrequencyPageUp);
+		inputMgr.RemoveActionListener("BA_VONMenuFrequencyPageDown", EActionTrigger.DOWN, BARI_ActionFrequencyPageDown);
 	}
 
-	protected void OnAdjustEntryNSteps(int nSteps)
+	protected void BARI_OnAdjustEntryNSteps(int nSteps)
 	{
 		if (0 == nSteps)
 			return;
